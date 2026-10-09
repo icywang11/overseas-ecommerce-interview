@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3ecdf;
+  --paper-2: #e7dcc8;
+  --ink: #1c1914;
+  --ink-soft: #4a4338;
+  --cinnabar: #b43324;
+  --sea: #1d4a62;
+  --stamp: #8d6a32;
+  --line: rgba(28, 25, 20, 0.14);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-cinnabar: var(--cinnabar);
+  --color-sea: var(--sea);
+  --color-stamp: var(--stamp);
+  --font-sans: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --font-serif: "Noto Serif SC", "Songti SC", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(180, 51, 36, 0.08), transparent 50%),
+    radial-gradient(900px 400px at 110% 0%, rgba(29, 74, 98, 0.08), transparent 45%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+.stamp {
+  border: 2px solid var(--cinnabar);
+  color: var(--cinnabar);
+  letter-spacing: 0.12em;
+  transform: rotate(-8deg);
+}
+
+button, input {
+  font-family: inherit;
+}
