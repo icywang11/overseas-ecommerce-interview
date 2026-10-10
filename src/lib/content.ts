@@ -287,6 +287,89 @@ export const followups = [
   },
 ];
 
+export const products = [
+  {
+    name: "空调",
+    unit: "智能家居里最大的一块，也是海外最常被单独拿出来讲的品类",
+    japan: "日本家庭认的是「大清快」。卖点是等离子空清、自动清扫、省电，不是单纯比冷量。房间按叠数卖，6 叠、10 叠、14 叠，和国内按匹数报价不是同一套语言。",
+    links: [
+      { label: "东芝空调一览", href: "https://www.toshiba-lifestyle.com/jp/air_conditioners/lineup/" },
+      { label: "Comfee 空调（6 / 10 / 14 叠）", href: "https://www.feelcomfee.com/jp/products/air-conditioner" },
+    ],
+  },
+  {
+    name: "冰箱",
+    unit: "冰箱事业部，合肥",
+    japan: "日本厨房窄，宽度和开门方向先于容量。东芝页面上能看到 460L 到 600L 以上的多门冰箱，卖点是蔬菜室保湿、急冷冻、IoLIFE 用电习惯学习。小户型另有 Comfee 的一两门小冰箱。",
+    links: [
+      { label: "东芝冰箱一览", href: "https://www.toshiba-lifestyle.com/jp/refrigerators/lineup/" },
+      { label: "Comfee 全品类（含小冰箱）", href: "https://www.feelcomfee.com/jp/products" },
+    ],
+  },
+  {
+    name: "洗衣机",
+    unit: "洗衣机事业部，无锡。这是岗位容易被问到的入口，但不是全部",
+    japan: "公寓多，滚筒洗衣干燥一体机是主叙事：一次洗烘、低噪音、窄机身。东芝有 13kg 洗、7kg 烘、机身宽 600mm 的机型。Comfee 则用 6kg、7kg 全自动，打新生活和租房。",
+    links: [
+      { label: "东芝洗衣机一览", href: "https://www.toshiba-lifestyle.com/jp/laundries/lineup/" },
+      { label: "Comfee 7kg 洗衣机", href: "https://www.feelcomfee.com/jp/products/laundry/CAC06W70UEWW-JP-top-load-washing-machine" },
+    ],
+  },
+  {
+    name: "微波和烤箱",
+    unit: "微波和烤箱事业部，佛山",
+    japan: "单功能微波炉只是入门。日本页面的主力是过热水蒸气烤箱、扁平内腔、复热油炸物。体积小、要进厨房吊柜或台面，海运按体积算很亏，适合走本地仓和套装，不适合临时空运。",
+    links: [{ label: "东芝微波炉 / 烤箱一览", href: "https://www.toshiba-lifestyle.com/jp/microwaves/lineup/" }],
+  },
+  {
+    name: "电饭煲",
+    unit: "厨房电器。日本消费者会为「饭好不好吃」付溢价",
+    japan: "真空压力 IH、内胆角度、保温，是日本厨房电器的高感知差异。东芝「炎匠炊き」有真空压力 IH 旗舰，也有压力 IH 和普通 IH。面试里这是最容易讲出「日本和国内详情页不一样」的例子。",
+    links: [{ label: "东芝电饭煲一览", href: "https://www.toshiba-lifestyle.com/jp/rice-cookers/lineup/" }],
+  },
+  {
+    name: "吸尘器",
+    unit: "小家电。轻、续航、垃圾怎么倒，比吸力参数更常被比较",
+    japan: "东芝页面分无线、纸袋、旋风。无线款强调自动清理、轻量、宠物毛。日本住宅小，收纳体积和噪音会进评价，不只有吸力。",
+    links: [{ label: "东芝吸尘器一览", href: "https://www.toshiba-lifestyle.com/jp/vacuum_cleaners/lineup/" }],
+  },
+  {
+    name: "厨房小电和热水相关",
+    unit: "厨房和热水事业部，佛山。日本消费端更常先看到洗碗机、电磁炉、饮水，而不是商用热水器",
+    japan: "Comfee 日本站把洗碗机、IH、空气炸锅、烤箱、饮水机放在同一组「好上手的小家电」里，对着新生活套装。大家电走东芝，小电走 Comfee，这是日本市场上已经分开的两个货盘。",
+    links: [
+      { label: "Comfee 日本产品页", href: "https://www.feelcomfee.com/jp/products" },
+      { label: "Comfee 日本介绍", href: "https://comfee-jp.com/" },
+    ],
+  },
+];
+
+export const exportNotes = [
+  {
+    title: "日本店里，消费者先看到的牌子",
+    body: "2016 年美的收购东芝家电业务后，日本白电的门面是东芝生活。Comfee 是集团里面向年轻、海外和新生活的牌子，日本有独立产品站。大阪的日本美的更偏研发，不是商场里的货架。",
+  },
+  {
+    title: "海外不是只卖洗衣机",
+    body: "公司公开新闻写到，海外智能家居用美的、东芝、Comfee 三个全品类牌子一起铺。空调在巴西、埃及，冰箱在马来西亚、沙特、智利，洗衣机在马来西亚，微波炉等小家电和冰箱在日本、泰国、越南，都被写成品类领先。面试时说「日本我先看东芝和 Comfee 的货架」，不要报一个你没核对过的份额数字。",
+  },
+  {
+    title: "和一面题目怎么接",
+    body: "冰箱和洗衣干燥机又重又大，物流和关税先打它们。电饭煲、微波炉、吸尘器客单低，运费占比更高，更适合本地仓和套装。日本促销节点是年初新生活、奖金季和换季空调，不是把国内双十一日历翻译过去。",
+  },
+];
+
+export const readFirst = [
+  { label: "东芝生活日本首页", href: "https://www.toshiba-lifestyle.com/jp/" },
+  { label: "Comfee 日本产品", href: "https://www.feelcomfee.com/jp/products" },
+  { label: "日本美的", href: "https://midea-japan.com/" },
+  { label: "美的智能家居业务（品牌关系）", href: "https://www.midea.com.cn/en/our-businesses/Smart-Home-Business-Unit" },
+  {
+    label: "海外收入与多品牌（公司新闻）",
+    href: "https://www.midea.com/global/news/midea-wins-forbes-china-flagship-brand-again",
+  },
+];
+
 export const timeline = [
   { t: "0:00–2:00", do: "一个人用一两句定标准，问大家是否同意。不要开场就念八项。" },
   { t: "2:00–10:00", do: "各自给出三项。你发言控制在 60 秒：标准、选择、一项影响。" },

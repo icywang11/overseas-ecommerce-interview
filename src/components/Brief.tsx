@@ -5,12 +5,15 @@ import {
   bonus,
   challenges,
   concede,
+  exportNotes,
   followups,
   impacts,
   intro,
   jdMap,
   layout,
   pitfalls,
+  products,
+  readFirst,
   roles,
   rubric,
   speak90,
@@ -19,6 +22,7 @@ import {
 } from "@/lib/content";
 
 const tabs = [
+  ["goods", "产品"],
   ["case", "真题"],
   ["layout", "布局"],
   ["room", "群面"],
@@ -29,7 +33,7 @@ const tabs = [
 type Tab = (typeof tabs)[number][0];
 
 export function Brief() {
-  const [tab, setTab] = useState<Tab>("case");
+  const [tab, setTab] = useState<Tab>("goods");
   const [picked, setPicked] = useState<number[]>([]);
   const [revealed, setRevealed] = useState(false);
 
@@ -81,6 +85,50 @@ export function Brief() {
           </button>
         ))}
       </nav>
+
+      {tab === "goods" && (
+        <section className="mt-6 space-y-6">
+          <div className="grid gap-4 lg:grid-cols-3">
+            {exportNotes.map((note) => (
+              <article key={note.title} className="border border-[var(--line)] bg-white/70 p-4">
+                <h2 className="serif text-lg">{note.title}</h2>
+                <p className="mt-2 text-sm leading-7 text-ink-soft">{note.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {readFirst.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="border border-sea px-3 py-2 text-sm text-sea"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <ul className="grid gap-4">
+            {products.map((item) => (
+              <li key={item.name} className="border border-[var(--line)] bg-white/60 p-5">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h2 className="serif text-2xl">{item.name}</h2>
+                  <p className="text-xs text-stamp">{item.unit}</p>
+                </div>
+                <p className="mt-3 text-sm leading-7">{item.japan}</p>
+                <div className="mt-3 flex flex-wrap gap-3">
+                  {item.links.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="text-sm text-cinnabar underline">
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {tab === "case" && (
         <section className="mt-6 space-y-8">
