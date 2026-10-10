@@ -11,6 +11,8 @@ import {
   intro,
   jdMap,
   layout,
+  likelyQuestions,
+  offlineWatch,
   pitfalls,
   products,
   readFirst,
@@ -267,6 +269,29 @@ export function Brief() {
 
       {tab === "room" && (
         <section className="mt-6 space-y-6">
+          <div className="grid gap-4 md:grid-cols-2">
+            {offlineWatch.map((block) => (
+              <article key={block.name} className="border border-[var(--line)] bg-white/70 p-4">
+                <h2 className="serif text-xl">{block.name}</h2>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-ink-soft">
+                  {block.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <div>
+            <h2 className="serif text-2xl">这道题后面常接的问法</h2>
+            <ul className="mt-3 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+              {likelyQuestions.map((item) => (
+                <li key={item.q} className="py-4">
+                  <p className="font-medium">{item.q}</p>
+                  <p className="mt-1 text-sm leading-7 text-ink-soft">{item.a}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="overflow-x-auto border border-[var(--line)]">
             <table className="w-full min-w-[640px] text-left text-sm">
               <thead className="bg-white/70 text-xs tracking-widest text-ink-soft">
